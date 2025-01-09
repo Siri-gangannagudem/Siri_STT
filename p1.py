@@ -1,33 +1,34 @@
-def f(a, b):
-    if(a < 0):
-        return 0
-    elif (b < 0):
-        return 0
-    elif (a%2 == 0 and b%2 == 0):
-        return a + b
-    elif (a%2 == 0 and b%2 != 0):
-        return a - b
-    elif (a%2 != 0 and b%2 == 0):
-        return a*b
-    elif (a%2 != 0 and b%2 != 0):
-        return a/b
-    else:
-        return -1
+"""Module to perform operations based on the input values."""
 
-def g(a, b):
-    if (a < 0):
+def f(x, y):
+    """Performs operations based on the conditions for x and y."""
+    if x < 0 or y < 0:
         return 0
-    elif (b < 0):
-        return 0
-    else:
-        s = 0
-        for i in range((a+b)%2):
-            s += i
-        return s
+    if x % 2 == 0 and y % 2 == 0:
+        return x + y
+    if x % 2 == 0 and y % 2 != 0:
+        return x - y
+    if x % 2 != 0 and y % 2 == 0:
+        return x * y
+    if x % 2 != 0 and y % 2 != 0:
+        return x / y
+    return -1
 
-a = int(input())
-b = int(input())
-c = f(a, b)
-d = g(a, b)
-print(c)
-print(d)   
+
+def g(x, y):
+    """Calculates a sum based on the modulo of x and y."""
+    if x < 0 or y < 0:
+        return 0
+    s = 0
+    for i in range((x + y) % 2):
+        s += i
+    return s
+
+
+if __name__ == "__main__":
+    a = int(input())
+    b = int(input())
+    c = f(a, b)
+    d = g(a, b)
+    print(c)
+    print(d)   
