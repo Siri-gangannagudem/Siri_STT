@@ -26,10 +26,10 @@ name: Lint Code with Pylint
 on:
   push:
     branches:
-      - master  # You can change this to the branch you want to track
+      - master  
   pull_request:
     branches:
-      - master  # Same as above
+      - master  
 
 jobs:
   lint:
