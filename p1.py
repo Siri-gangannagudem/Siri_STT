@@ -31,4 +31,5 @@ if __name__ == "__main__":
     c = f(a, b)
     d = g(a, b)
     print(c)
-    print(d)   
+    print(d)
+    
