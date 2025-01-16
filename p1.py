@@ -32,4 +32,3 @@ if __name__ == "__main__":
     d = g(a, b)
     print(c)
     print(d)
-    
